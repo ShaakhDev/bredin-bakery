@@ -1,5 +1,6 @@
 import { Sidebar } from "../../navbar/sidebar/sidebar";
 import { HomeSection } from "./homeSection/homeSection";
+
 export const Home = () => {
   return (
     <>
