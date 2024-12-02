@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Box } from "../box/box";
+import { Box } from "../box";
 
 export const HomeSection = () => {
   return (

@@ -22,7 +22,7 @@ export const Box = () => {
             )}
           </button>
           <img src="/src/assets/boxImg.svg" alt="" />
-          <Link to={"/card"}>
+          <Link to={"/cart"}>
             <button className="absolute bottom-[10px] right-[10px] bg-white px-[15px] py-[6px] rounded-[30px]">
               Add to Cart <i className="fa-brands fa-cc-visa"></i>
             </button>

@@ -1,28 +1,24 @@
-import { Route, Routes, useLocation } from "react-router-dom";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { MainRouter } from "./mainRouter";
-import { Header } from "./navbar/header/header";
-import { MainHeader } from "./navbar/mainHeader/mainHeader";
-import { Welcome } from "./pages/welocme/welcome";
+import { MainHeader } from "@/components";
+import { Welcome } from "pages";
 import { Home } from "./pages/home/home";
 import { Login } from "./pages/login/login";
 import { Register } from "./pages/register/register";
 import { Card } from "./pages/card/card";
+import { Layout } from "./layout/layout";
 
 export const Router = () => {
   return (
     <>
       <Routes>
-        <Route element={<Header />}>
-          <Route path="/" element={<Welcome />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-        </Route>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route element={<MainRouter />}>
-          <Route element={<MainHeader />}>
+          <Route element={<Layout />}>
             <Route path="home" element={<Home />} />
-            <Route path="card" element={<Card />} />
+            <Route path="cart" element={<Card />} />
           </Route>
         </Route>
       </Routes>
